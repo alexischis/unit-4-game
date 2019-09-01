@@ -28,6 +28,23 @@ console.log(crystalTwo);
 console.log(crystalThree);
 console.log(crystalFour);
 
+// click event for crystals
+$('#crystal1').on("click", function() {
+  $('#total-score').html(++crystalOne);
+  });
+
+$('#crystal2').on("click", function() {
+  $('#total-score').html(++crystalTwo);
+  });
+
+$('#crystal3').on("click", function() {
+  $('#total-score').html(++crystalThree);
+  });
+      
+$('#crystal4').on("click", function() {
+  $('#total-score').html(++crystalFour);
+  });
+
 // reset function to allow the computer to choose a different letter when the time comes
 function reset() {
     computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
