@@ -1,3 +1,92 @@
-img {
-    width: 100px;
+html,
+body,
+header,
+.view {
+  height: 100%;
 }
+
+.view {
+    width: 100%;
+}
+
+body {
+    padding: 10px !important;
+    width: 100%;
+}
+
+#game-title {
+    background-color: rgba(211, 0, 193, 0.795);
+    padding: 5px;
+    margin-bottom: 10px !important;
+    font-size: 42px;
+    font: bold;
+    width: 75%;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#instructions, #score-board {
+    background-color: rgba(245, 131, 235, 0.795);
+    padding: 5px;
+    font-size: 18px;
+    margin-bottom: 10px !important;
+    line-height: 20px;
+    width: 75%;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+#random-value {
+    background-color: rgba(116, 4, 106, 0.795);
+    color: white;
+    font: bolder;
+    width: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#random-value, #total-score {
+    font-size: 28px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#total-score {
+    background-color: rgba(116, 4, 106, 0.795);
+    color: white;
+    font: bolder;
+    width: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#score-text {
+    background-color: rgba(245, 131, 235, 0.795);
+    padding: 10px;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: 'Didact Gothic', sans-serif;
+    width: 150px;
+    margin: 0px;
+}
+
+strong {
+    font-size: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2px;
+    margin-bottom: 10px;
+    width: 75%;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25;
+    max-width: 20%;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 75%;
+  }

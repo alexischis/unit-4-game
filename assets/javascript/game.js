@@ -51,7 +51,7 @@ function reset() {
 // increasing wins
  function userRight() {
    alert(" You Did It!");
-   wins ++;
+   numberWins ++;
    $('#wins').html('Wins:' + "" + numberWins);
    reset();
  }
@@ -59,14 +59,14 @@ function reset() {
  // increasing losses
  function userWrong() {
    alert("Too Much!");
-   losses ++;
+   numberLosses ++;
    $('#losses').html('Losses:' + "" + numberLosses);
    reset();
  }
 
  // click event for crystals
 $('#crystal1').on("click", function() {
-  userChoice = userChoice += crystalOne;
+  userChoice = userChoice += parseInt(crystalOne);
   console.log("New userChoice= "+ userChoice);
   $('#total-score').html(userChoice);
   if (userChoice === computerChoice) {
@@ -78,7 +78,7 @@ $('#crystal1').on("click", function() {
 })
 
 $('#crystal2').on("click", function() {
-  userChoice = userChoice + crystalTwo;
+  userChoice = userChoice + parseInt(crystalTwo);
   console.log("New userChoice= "+ userChoice);
   $('#total-score').html(userChoice);
   if (userChoice === computerChoice) {
@@ -90,7 +90,7 @@ $('#crystal2').on("click", function() {
 })
 
 $('#crystal3').on("click", function() {
-  userChoice = userChoice + crystalThree;
+  userChoice = userChoice + parseInt(crystalThree);
   console.log("New userChoice= "+ userChoice);
   $('#total-score').html(userChoice);
   if (userChoice === computerChoice) {
@@ -102,7 +102,7 @@ $('#crystal3').on("click", function() {
 })
 
 $('#crystal4').on("click", function() {
-  userChoice = userChoice + crystalTFour;
+  userChoice = userChoice + parseInt(crystalFour);
   console.log("New userChoice= "+ userChoice);
   $('#total-score').html(userChoice);
   if (userChoice === computerChoice) {
