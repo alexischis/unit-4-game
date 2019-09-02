@@ -1,49 +1,66 @@
-// computer can choose any number from 19-120
-function numberRange (start, end) {
-    return new Array(end - start +1).fill().map((d, i) => i + start);
-  }
+$(document).ready(function(){
 
-  numberRange(19, 120); 
-
-
-var crystalValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+// values for crystals
+var crystalValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
 // set up the numeric variables for the game
 var wins = 0;
 var losses = 0;
+var UserChoice=0;
 
-// computer can choose any letter from the alphabet at random
-var computerGuess = numberRange[Math.floor(Math.random() * numberRange.length)];
+// computer can choose any number from 19-120 at random
+var computerGuess =Math.floor(Math.random() *101+19);
 
 var crystalOne = crystalValues[Math.floor(Math.random()* crystalValues.length)];
 var crystalTwo = crystalValues[Math.floor(Math.random()* crystalValues.length)];
 var crystalThree = crystalValues[Math.floor(Math.random()* crystalValues.length)];
 var crystalFour = crystalValues[Math.floor(Math.random()* crystalValues.length)];
 
+var userChoice = [];
+
+
+
 // documenting what letter the computer chooses in the console log
 console.log(numberRange);
-
+console.log(userChoice);
 console.log(crystalOne);
 console.log(crystalTwo);
 console.log(crystalThree);
 console.log(crystalFour);
 
+var sum = 0;
+function sum
+for(var i=0; i<userChoice.length;i++){
+  sum += parseInt(userChoice[i]);
+}
+  console.log("total score is" + "" + sum);
+
 // click event for crystals
 $('#crystal1').on("click", function() {
-  $('#total-score').html(++crystalOne);
+  crystalChoice = userChoice.push(crystalOne);
+  $('#total-score').html(+userChoice);
   });
 
 $('#crystal2').on("click", function() {
-  $('#total-score').html(++crystalTwo);
+  crystalChoice = userChoice.push(crystalTwo);
+  $('#total-score').html(+userChoice);
   });
 
 $('#crystal3').on("click", function() {
-  $('#total-score').html(++crystalThree);
+  crystalChoice = userChoice.push(crystalThree);
+  $('#total-score').html(+userChoice);
   });
       
 $('#crystal4').on("click", function() {
-  $('#total-score').html(++crystalFour);
+  crystalChoice = userChoice.push(crystalFour);
+  $('#total-score').html(+userChoice);
   });
+
+ 
+
+
+
+  // $('#total-score').html(this);
 
 // reset function to allow the computer to choose a different letter when the time comes
 function reset() {
