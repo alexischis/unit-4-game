@@ -1,12 +1,16 @@
-html,
+/* html,
 body,
 header,
 .view {
   height: 100%;
-}
+} */
 
 .view {
     width: 100%;
+}
+
+nav {
+    font-family: 'Libre Caslon Text', serif;
 }
 
 body {
@@ -60,7 +64,7 @@ body {
 #score-text {
     background-color: rgba(245, 131, 235, 0.795);
     padding: 10px;
-    font-size: 18px;
+    font-size: 18px !important;
     line-height: 20px;
     font-family: 'Didact Gothic', sans-serif;
     width: 150px;
